@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Title of the document</title>	
+</head>
+
+<body>
+
+<h2>Welcome to World of Microservices!</h2>
+<p>[Me] Hey, WebApi say hello!</p>
+<p>[WebApi] <span id="WebApiResponse"></span></p>
+
+<script src="js/jquery-2.1.4.min.js"></script> 
+<script>
+$(function() {
+	$.get("http://localhost/webapi/sayhello", function(data) {
+		setTimeout(function() {
+			$('#WebApiResponse').html(data);											
+		}, 1000);
+	});
+});
+
+</script>
+</body>
+</html> 
